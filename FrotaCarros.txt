@@ -1,0 +1,20 @@
+5
+HMG0248,1,Vogue,Land Rover,2017,14600,1,
+
+
+LPT4625,2,HB20S,Hyundai,2020,2025251448,1,
+
+
+
+
+JSQ7436,3,Focus,Ford,2017,17400,1,
+
+
+
+
+FOR1904,3,Fiesta,Ford,2011,77100,1,
+
+
+
+
+JDR0312,2,Frontier,Nissan,2018,44300,1,

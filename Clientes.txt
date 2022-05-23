@@ -1,0 +1,6 @@
+5
+123456789,Iago Mendes Nogueira,100,NULL,
+109876543,Dionas Luan Muller,0,NULL,
+12345432,Adriel Luan da Silveira,450,NULL,
+109876789,Guilherme de Lima Menezes,250,NULL,
+112233445,Natanael Nunes Flach,800,NULL,
