@@ -15,13 +15,11 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "c:/Users/glmgu/Guilherme Documentos/VScode/grupo-04-iago/Entrega 1/NovoTrabalho",
-      "environment": [],
-      "program": "c:/Users/glmgu/Guilherme Documentos/VScode/grupo-04-iago/Entrega 1/NovoTrabalho/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
+      "externalConsole": false,
+      "cwd": "c:/Users/glmgu/Guilherme Documentos/RP3 - trabalho/grupo-04/Entrega 1/NovoTrabalho",
+      "program": "c:/Users/glmgu/Guilherme Documentos/RP3 - trabalho/grupo-04/Entrega 1/NovoTrabalho/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
-      "console": "integratedTerminal",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

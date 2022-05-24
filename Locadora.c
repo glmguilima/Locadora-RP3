@@ -276,6 +276,7 @@ int relatorio(Carro *frota,int quantidadeCarro){
 int buscaVeiculoDisponivel(Carro*frota, int quantidadeCarro, int categoria){
     int i=0;
     int preco;
+    int cont =0;
   switch (categoria)
         {
         case 1 :
@@ -294,12 +295,17 @@ int buscaVeiculoDisponivel(Carro*frota, int quantidadeCarro, int categoria){
                 printf("%d, ", frota[i].kmCarro);
                 printf("%d.\n", frota[i].disponibilidade);
                 puts(" ");
+                cont++; 
                 }
-        }        
-        
+             }   
+            if(cont ==0 ){
+                       printf ("Nao existem carros disponiveis\n");
+                       return PainelInicial();
+                   }     
             break;
         case 2:
         preco =precoInt;
+        cont = 0;
         printf("A categoria do cliente eh a intermediaria.\n");
         printf("O valor da diaria eh %d reais.\n", preco);
         printf("Os carros diponiveis para essa categoria sao:\n");
@@ -313,13 +319,17 @@ int buscaVeiculoDisponivel(Carro*frota, int quantidadeCarro, int categoria){
                 printf("%d, ", frota[i].kmCarro);
                 printf("%d.\n", frota[i].disponibilidade);
                 puts(" ");
+                 cont++;
                 }
             }
-
-
+                if(cont ==0 ){
+                       printf ("Nao existem carros disponiveis\n");
+                       return PainelInicial();
+                   }  
             break;
         case 3:
         preco =precoLux;
+        cont = 0;
         printf("A categoria do cliente eh Luxo.\n");
         printf("O valor da diaria eh %d reais.\n", preco);
         printf("Os carros diponiveis para essa categoria sao:\n");
@@ -333,8 +343,13 @@ int buscaVeiculoDisponivel(Carro*frota, int quantidadeCarro, int categoria){
                 printf("%d, ", frota[i].kmCarro);
                 printf("%d.\n", frota[i].disponibilidade);
                 puts(" ");
-                }
+                cont++;
+                }      
         }
+        if(cont ==0 ){
+                       printf ("Nao existem carros disponiveis\n");
+                       return PainelInicial();
+                   }
         break;
     }
    return i;
@@ -445,8 +460,8 @@ void GravaCarros(Carro *frota, int quantidadeCarro)
     fflush(stdin);
     fprintf(gravCar, "%d\n", quantidadeCarro);
     do
-    {
-        fprintf(gravCar, "%s,%d,%s,%s,%d,%d,%d,\n", frota[i].placa, frota[i].categoria, frota[i].modelo, frota[i].marca, frota[i].ano, frota[i].kmCarro, frota[i].disponibilidade);
+    {                                           //tirar o barra nova linha. para nao dar espacamento no arquivo.
+        fprintf(gravCar, "%s,%d,%s,%s,%d,%d,%d,", frota[i].placa, frota[i].categoria, frota[i].modelo, frota[i].marca, frota[i].ano, frota[i].kmCarro, frota[i].disponibilidade);
         i++;
         quantidade--;
     } while (quantidade != 0);
@@ -474,6 +489,7 @@ void GravaClientes(Cliente *clientes, int quantidadedeClientes)
         fprintf(gravCli, "%d,%s,%d,%s,\n", clientes[i].cnh, clientes[i].nome, clientes[i].fidelidade, clientes[i].placa);
         i++;
         quantidade--;
+    
     } while (quantidade != 0);
 
     fclose(gravCli);
